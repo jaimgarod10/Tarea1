@@ -15,7 +15,7 @@ public class Componentes {
 
     public Componentes() {
 
-        marco = new JFrame("Componentes ");
+        marco = new JFrame("Componentes y layouts ");
         panel = new JPanel();
         boton1 = new JButton("Limpiar ");
         boton2 = new JButton("Pulsar ");
@@ -35,16 +35,61 @@ public class Componentes {
         lineaDeTexto2.setText("      ");
         areaTexto .setSize(400,200);
 
-        panel.add(boton1, Component.BOTTOM_ALIGNMENT);
-        panel.add(boton2);
-        panel.add(etiqueta1);
-        panel.add(lineaDeTexto1);
-        panel.add(etiqueta2);
-        panel.add(lineaDeTexto2);
-        panel.add(areaTexto);
-        marco.add(panel);
-        marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        marco.setVisible(true);
     }
+
+    public void disBoxLayoutE(){
+
+        //asocioamos el panel con el distribuidor de layout
+
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.add(etiqueta1);
+        panel.add(etiqueta2);
+        marco.add(panel);
+        marco.pack();
+        marco.setDefaultCloseOperation(3);
+        marco.setVisible(true);
+
+    }
+
+    public void disBoxLayoutLT(){
+
+        //asocioamos el panel con el distribuidor de layout
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.add(lineaDeTexto1);
+        panel.add(lineaDeTexto2);
+        marco.add(panel);
+        marco.pack();
+        marco.setDefaultCloseOperation(3);
+        marco.setVisible(true);
+
+    }
+
+    public void disBorderLayout(){
+
+        //asociamos el panel con el distribuidor de layout
+
+        panel.setLayout(new BorderLayout());
+        panel.add(areaTexto, BorderLayout.CENTER);
+        marco.add(panel);
+        marco.pack();
+        marco.setDefaultCloseOperation(3);
+        marco.setVisible(true);
+
+    }
+
+    public void disGridLayout(){
+
+        //asocioamos el panel con el distribuidor de layout
+
+        panel.setLayout(new GridLayout(2,3));
+        panel.add(boton1, BorderLayout.SOUTH);
+        panel.add(boton2,BorderLayout.SOUTH);
+        marco.add(panel);
+        marco.pack();
+        marco.setDefaultCloseOperation(3);
+        marco.setVisible(true);
+
+    }
+
 
 }
