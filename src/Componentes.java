@@ -28,11 +28,9 @@ public class Componentes {
         marco.setBounds(0, 0, 340, 400);
         panel.setSize(340, 400);
         etiqueta1.setText("Nombre ");
-        lineaDeTexto1.setSize(100, 450);
-        lineaDeTexto1.setText("      ");
+        lineaDeTexto1.setText("");
         etiqueta2.setText("Password ");
-        //lineaDeTexto2.setSize(100, 50);
-        lineaDeTexto2.setText("      ");
+        lineaDeTexto2.setText("");
         areaTexto.setSize(400,200);
         areaTexto.setText(" Área de texto. ");
 
