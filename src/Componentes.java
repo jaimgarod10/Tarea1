@@ -22,74 +22,39 @@ public class Componentes {
         etiqueta1 = new JLabel();
         lineaDeTexto1 = new JTextField();
         etiqueta2 = new JLabel();
-        lineaDeTexto2 = new JTextField();
+        lineaDeTexto2 = new JPasswordField();
         areaTexto = new JTextArea();
 
-        marco.setBounds(0, 0, 600, 400);
-        panel.setSize(600, 400);
+        marco.setBounds(0, 0, 340, 400);
+        panel.setSize(340, 400);
         etiqueta1.setText("Nombre ");
-        lineaDeTexto1.setSize(100, 50);
+        lineaDeTexto1.setSize(100, 450);
         lineaDeTexto1.setText("      ");
         etiqueta2.setText("Password ");
-        lineaDeTexto2.setSize(100, 50);
+        //lineaDeTexto2.setSize(100, 50);
         lineaDeTexto2.setText("      ");
-        areaTexto .setSize(400,200);
+        areaTexto.setSize(400,200);
+        areaTexto.setText(" Área de texto. ");
 
-    }
-
-    public void disBoxLayoutE(){
-
-        //asocioamos el panel con el distribuidor de layout
-
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.setLayout(null);
         panel.add(etiqueta1);
-        panel.add(etiqueta2);
-        marco.add(panel);
-        marco.pack();
-        marco.setDefaultCloseOperation(3);
-        marco.setVisible(true);
-
-    }
-
-    public void disBoxLayoutLT(){
-
-        //asocioamos el panel con el distribuidor de layout
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        etiqueta1.setBounds(40,40,100,30);
         panel.add(lineaDeTexto1);
+        lineaDeTexto1.setBounds(160,40,120,30);
+        panel.add(etiqueta2);
+        etiqueta2.setBounds(40,80,100,30);
         panel.add(lineaDeTexto2);
+        lineaDeTexto2.setBounds(160,80,120,30);
+        panel.add(areaTexto);
+        areaTexto.setBounds(40,120,240,120);
+        panel.add(boton1);
+        boton1.setBounds(40,120+120+20,100,30);
+        panel.add(boton2);
+        boton2.setBounds(180,120+120+20,100,30);
         marco.add(panel);
-        marco.pack();
-        marco.setDefaultCloseOperation(3);
         marco.setVisible(true);
+        marco.setDefaultCloseOperation(3);
 
     }
-
-    public void disBorderLayout(){
-
-        //asociamos el panel con el distribuidor de layout
-
-        panel.setLayout(new BorderLayout());
-        panel.add(areaTexto, BorderLayout.CENTER);
-        marco.add(panel);
-        marco.pack();
-        marco.setDefaultCloseOperation(3);
-        marco.setVisible(true);
-
-    }
-
-    public void disGridLayout(){
-
-        //asocioamos el panel con el distribuidor de layout
-
-        panel.setLayout(new GridLayout(2,3));
-        panel.add(boton1, BorderLayout.SOUTH);
-        panel.add(boton2,BorderLayout.SOUTH);
-        marco.add(panel);
-        marco.pack();
-        marco.setDefaultCloseOperation(3);
-        marco.setVisible(true);
-
-    }
-
 
 }
